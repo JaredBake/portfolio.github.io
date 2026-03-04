@@ -1,33 +1,67 @@
-# Portfolio (Next.js + Tailwind + Vercel)
+# Portfolio (Angular)
 
-Single-page personal portfolio built with Next.js App Router + Tailwind CSS.
+This repository is set up as a fresh Angular portfolio project, connected to GitHub and prepared for MCP-based workflows with Angular, Vercel, and Supabase.
 
-## Edit your content
+## Prerequisites
 
-Update your info/projects in `src/content/portfolio.json`.
+- Node.js `v20.19.0+` (current environment is compatible)
+- npm
+- VS Code
 
-Optional:
-- Add a resume PDF at `public/resume.pdf`.
-
-## Run locally
-
-If PowerShell blocks `npm`/`npx` (because it tries to run `npm.ps1`), use the `.cmd` variants:
+## Local setup
 
 ```bash
-npm.cmd run dev
+npm install
+npm start
 ```
 
-Then open http://localhost:3000
+Open `http://localhost:4200`.
 
-## Deploy with Vercel
+## MCP configuration
 
-1. Push this repo to GitHub.
-2. In Vercel: **Add New → Project** → import your GitHub repo.
-3. Vercel auto-detects **Next.js** and deploys.
+MCP servers are configured in `.vscode/mcp.json`:
 
-## Scripts
+- `angular-cli` via `@angular/cli mcp`
+- `vercel` via `https://mcp.vercel.com`
+- `supabase` via `https://mcp.supabase.com/mcp?project_ref=${env:SUPABASE_PROJECT_REF}`
 
-- `npm.cmd run dev` — dev server
-- `npm.cmd run build` — production build
-- `npm.cmd run start` — run production server
-- `npm.cmd run lint` — lint
+Set these environment variables in your shell or user environment before using Supabase MCP:
+
+- `SUPABASE_PROJECT_REF`
+- `SUPABASE_ACCESS_TOKEN`
+
+Use `.env.example` as your variable checklist.
+
+## Supabase app integration
+
+- Runtime dependency installed: `@supabase/supabase-js`
+- Client bootstrap: `src/app/core/supabase.client.ts`
+- Environment placeholders:
+	- `src/environments/environment.ts`
+	- `src/environments/environment.development.ts`
+
+Fill `supabaseUrl` and `supabaseAnonKey` before connecting app features.
+
+## Vercel deployment
+
+- Vercel CLI added as a dev dependency
+- Deployment config in `vercel.json`
+
+Typical flow:
+
+```bash
+npx vercel
+```
+
+## Build and test
+
+```bash
+npm run build
+npm test
+```
+
+## GitHub
+
+Remote is already connected to:
+
+- `https://github.com/JaredBake/portfolio.git`
