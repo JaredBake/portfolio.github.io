@@ -9,7 +9,7 @@
       content="default-src 'self'; img-src 'self' data: https:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
     />
     <meta name="description" content="Professional portfolio website showcasing projects, experience, and technical skills." />
-    <title>Portfolio | Your Name</title>
+    <title>Jared Bake</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,7 @@
 
     <header class="site-header" id="top">
       <div class="container nav-wrap">
-        <a class="brand" href="#top" aria-label="Go to top">YN</a>
+        <p class="header-name" id="header-name">Jared Bake</p>
         <nav class="main-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#resume">Resume</a>
@@ -36,22 +36,37 @@
           <a href="#contact">Contact</a>
         </nav>
       </div>
+      <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
     </header>
 
     <main id="main-content">
       <section class="hero section" id="hero" aria-labelledby="hero-title">
         <div class="container hero-layout">
           <div class="hero-content reveal">
+            <p class="figma-display" id="hero-display-word" data-node-id="1:28"></p>
             <p class="eyebrow" id="hero-role"></p>
             <h1 id="hero-title"></h1>
             <p class="hero-summary" id="hero-summary"></p>
+            <p class="status-pill" id="availability-pill"></p>
             <div class="hero-actions" id="hero-actions"></div>
             <ul class="quick-metrics" id="quick-metrics" aria-label="Career highlights"></ul>
           </div>
-          <aside class="hero-card reveal" aria-labelledby="focus-title">
-            <h2 id="focus-title">Current Focus</h2>
-            <ul id="focus-list"></ul>
-          </aside>
+          <div class="hero-side reveal">
+            <article class="hero-card profile-card" aria-labelledby="profile-card-title">
+              <h2 id="profile-card-title" class="sr-only">Profile</h2>
+              <figure class="profile-figure">
+                <img id="hero-photo" class="profile-photo" src="assets/scooter.JPG" alt="Profile placeholder" />
+                <figcaption class="profile-meta">
+                  <p id="hero-photo-name"></p>
+                  <p id="hero-photo-location"></p>
+                </figcaption>
+              </figure>
+            </article>
+            <aside class="hero-card focus-card" aria-labelledby="focus-title">
+              <h2 id="focus-title">Current Focus</h2>
+              <ul id="focus-list"></ul>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -62,7 +77,10 @@
             <h2 id="about-title">How I Work</h2>
           </div>
           <div class="about-grid">
-            <article class="panel" id="about-panel"></article>
+            <article class="panel" id="about-panel">
+                <h3>My Approach</h3>
+                <p id="approach-text"></p>
+            </article>
             <article class="panel">
               <h3>What You Can Expect</h3>
               <ul class="expect-list" id="expect-list"></ul>

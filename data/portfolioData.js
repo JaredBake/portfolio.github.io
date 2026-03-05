@@ -1,10 +1,14 @@
 export const portfolioData = {
   profile: {
     initials: "YN",
-    name: "Your Name",
+    name: "Jared Bake",
     role: "Software Engineer | Full-Stack Developer",
+    heroDisplayWord: "BUILD",
     summary:
       "I build secure, thoughtful products that balance technical quality with user-centered design. I care about turning complex problems into calm, reliable experiences.",
+    availability: "Available for Summer and Fall 2026 opportunities",
+    imageSrc: "assets/scooter.JPG",
+    imageAlt: "Placeholder portrait image for Your Name",
     location: "City, State",
     email: "you@example.com",
     phone: "+1 (000) 000-0000",
