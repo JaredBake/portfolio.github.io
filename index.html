@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+    />
+    <meta name="description" content="Professional portfolio website showcasing projects, experience, and technical skills." />
+    <title>Portfolio | Your Name</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="background-layer" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Go to top">YN</a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#resume">Resume</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section" id="hero" aria-labelledby="hero-title">
+        <div class="container hero-layout">
+          <div class="hero-content reveal">
+            <p class="eyebrow" id="hero-role"></p>
+            <h1 id="hero-title"></h1>
+            <p class="hero-summary" id="hero-summary"></p>
+            <div class="hero-actions" id="hero-actions"></div>
+            <ul class="quick-metrics" id="quick-metrics" aria-label="Career highlights"></ul>
+          </div>
+          <aside class="hero-card reveal" aria-labelledby="focus-title">
+            <h2 id="focus-title">Current Focus</h2>
+            <ul id="focus-list"></ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="eyebrow">About Me</p>
+            <h2 id="about-title">How I Work</h2>
+          </div>
+          <div class="about-grid">
+            <article class="panel" id="about-panel"></article>
+            <article class="panel">
+              <h3>What You Can Expect</h3>
+              <ul class="expect-list" id="expect-list"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="resume" aria-labelledby="resume-title">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Resume</p>
+            <h2 id="resume-title">Experience and Education</h2>
+          </div>
+          <div class="resume-layout">
+            <article class="panel">
+              <h3>Experience</h3>
+              <ol class="timeline" id="experience-list"></ol>
+            </article>
+            <article class="panel">
+              <h3>Education and Certifications</h3>
+              <ol class="timeline" id="education-list"></ol>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2 id="projects-title">Selected Work</h2>
+          </div>
+          <div class="projects-grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Capabilities</p>
+            <h2 id="skills-title">Technical and Collaboration Skills</h2>
+          </div>
+          <div class="skills-layout">
+            <article class="panel">
+              <h3>Toolbox</h3>
+              <ul class="chip-list" id="toolbox-list"></ul>
+            </article>
+            <article class="panel">
+              <h3>Strengths</h3>
+              <ul class="chip-list" id="strengths-list"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container reveal">
+          <article class="contact-card">
+            <div>
+              <p class="eyebrow">Open To Opportunities</p>
+              <h2 id="contact-title">Let us build something meaningful.</h2>
+              <p id="contact-text"></p>
+            </div>
+            <div class="contact-actions" id="contact-actions"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p id="footer-copy"></p>
+        <a href="#top" class="top-link">Back to top</a>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
